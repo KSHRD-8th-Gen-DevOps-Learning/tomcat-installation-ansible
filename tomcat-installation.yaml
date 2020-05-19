@@ -1,0 +1,12 @@
+- name: Tomcat Installation Playbook
+  hosts: tomcat-nodes
+  become: yes
+  become_method: sudo
+  vars:
+    tomcat_ver: 9.0.30
+    ui_manager_user: manager
+    ui_manager_pass: managerpass
+    ui_admin_username: admin
+    ui_admin_pass: adminpass
+  roles:
+    - tomcat
